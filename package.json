@@ -1,0 +1,26 @@
+{
+  "name": "photo-overlay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "postbuild": "npm run copy-files",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run copy-files & tsc && node dist/server.js",
+    "nodemon": "nodemon --watch src --ext .tsx,.html --exec npm start",
+    "copy-files": "copyfiles -u 1 src/*.html dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "copyfiles": "^2.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
+    "uglify-js": "^3.19.3"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7"
+  }
+}
