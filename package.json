@@ -6,25 +6,24 @@
   "scripts": {
     "postbuild": "npm run copy-files",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run copy-files & tsc && node dist/server.js",
+    "start": "npm run copy-files & tsc  && npm run browserify && node dist/server.js",
     "nodemon": "nodemon --watch src --ext .ts,.html --exec npm start",
-    "copy-files": "copyfiles -u 1 src/lib/* src/**/*.html src/**/*.png dist"
+    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.png src/**/*.svg dist",
+    "browserify": "npx browserify ./dist/public/index.js -o ./dist/public/bundle.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@swc/core": "^1.7.28",
     "@types/express": "^5.0.0",
     "copyfiles": "^2.4.1",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
-    "tsup": "^8.3.0",
     "typescript": "^5.6.2",
-    "typescript-bundle": "^1.0.18",
     "uglify-js": "^3.19.3"
   },
   "dependencies": {
     "express": "^4.21.0",
-    "mathjs": "^13.1.1",
+    "matrix-js": "^1.7.1",
     "nodemon": "^3.1.7"
   }
 }
