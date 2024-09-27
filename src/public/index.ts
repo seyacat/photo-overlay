@@ -49,6 +49,18 @@ const main = () => {
     h: resolution.height,
     z: 100,
   });
+
+  const sample = new Image();
+  sample.src = "public/sample.png";
+  addItem({
+    id: 2,
+    img: sample,
+    position: { x: 0, y: 0 },
+    w: resolution.width,
+    h: resolution.height,
+    z: 1,
+  });
+
   corona.onload = () => {
     refreshCanvas();
   };

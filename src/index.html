@@ -72,7 +72,7 @@
 
       .grid-container {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
         grid-gap: 10px;
         padding: 10px;
       }
@@ -80,6 +80,17 @@
         width: 100%;
         padding-top: 20px;
         padding-bottom: 20px;
+      }
+      .Instrucciones {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding: 20px;
+        margin: 5px;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 0.5px;
+        border-color: grey;
+        color: white;
       }
     </style>
     <!-- <link
@@ -99,9 +110,9 @@
     ></canvas>
     <div style="width: 100%; height: 20px"></div>
     <div class="grid-container">
-      <div class="button-30">
+      <!-- <div class="button-30">
         <img src="public/icons/camera.svg" class="icon" id="takePhotoButton" />
-      </div>
+      </div> -->
       <div class="button-30">
         <img src="public/icons/folder.svg" class="icon" id="openPhotoButton" />
       </div>
@@ -112,6 +123,11 @@
           id="downloadPhotoButton"
         />
       </div>
+    </div>
+    <div class="Instrucciones">
+      Instrucciones: Capturar la imagen primero con su cámara y despues abrirla
+      con el boton de cargar imagen, usar la camara directamente puede que no
+      funcione. Despues pulsar el boton para descargar la imagen.
     </div>
 
     <input
